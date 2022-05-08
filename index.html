@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <py-script src="/todo.py">  </py-script>
+
+
+    <div class="max-w-sm w-1/2 m-auto mt-10 py-4 text-center border-2 bg-gray-100">
+        <h1 class="text-2xl py-2" id="length-todo">0 Todos</h1>
+
+        <div>
+            <input type="text" id="new-todo" class="outline-1 border-2">
+            <button id="new-todo-btn" type="submit" pys-onClick="handler.add_todo" class="bg-red-700 text-white cursor-pointer">Add Todo</button>
+        </div>
+
+        <div id="todo-list-container"/>
+    </div>
+
+
+    <template id="todo-template">
+        <div id="task" class="bg-white my-1 flex justify-between text-xl mx-2 items-center">
+            <p class="m-0 inline cursor-pointer"></p>
+            <i class="fa-solid fa-trash cursor-pointer"></i>
+        </div>
+    </template>
+
+</body>
+</html>
